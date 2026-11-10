@@ -1,7 +1,7 @@
-import { createContext, useContext, useEffect, useRef, useState } from 'react'
+﻿import { createContext, useContext, useEffect, useRef, useState } from 'react'
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5000'
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000'
 const HISTORY_KEY = 'speaksmart_history_v1'
 const MAX_HISTORY = 50
 

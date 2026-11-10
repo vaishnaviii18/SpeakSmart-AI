@@ -1,20 +1,20 @@
-import { useEffect, useState } from 'react'
+﻿import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const features = [
   {
-    icon: '📄',
+    icon: 'ðŸ“„',
     title: 'Bring Your Material',
     text: 'Upload your PDF or Word document and read it while you practise.',
   },
   {
-    icon: '🎙️',
+    icon: 'ðŸŽ™ï¸',
     title: 'Practise Your Speech',
     text: 'Record your presentation with a live timer, then play it back.',
   },
   {
-    icon: '📊',
+    icon: 'ðŸ“Š',
     title: 'See Where to Improve',
     text: 'Get a score, speaking pace, filler words and clear tips on a dashboard.',
   },
@@ -27,7 +27,7 @@ export default function Home() {
     let cancelled = false
 
     axios
-      .get('http://localhost:5000/')
+      .get((import.meta.env.VITE_API_URL || 'http://localhost:5000') + '/')
       .then(() => {
         if (!cancelled) setBackendStatus('online')
       })
@@ -58,7 +58,7 @@ export default function Home() {
 
         <div className="ss-btn-row" style={{ justifyContent: 'center' }}>
           <Link to="/upload" className="ss-btn ss-btn-primary">
-            Get Started →
+            Get Started â†’
           </Link>
           <Link to="/history" className="ss-btn ss-btn-ghost">
             View History

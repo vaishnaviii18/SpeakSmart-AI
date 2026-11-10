@@ -1,0 +1,251 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color: #f4f4ff;
+  background: #0b1020;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(ellipse at 50% 0%, #252052 0%, transparent 55%),
+    #0b1020;
+}
+
+.navbar {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8b5cf6, #5b6cff);
+  box-shadow: 0 8px 30px #7757ff35;
+}
+
+.brand-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.brand span {
+  color: #a78bfa;
+}
+
+.nav-label {
+  color: #a5acc5;
+  font-size: 13px;
+}
+
+.hero-section {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 95px 0 55px;
+}
+
+.hero-section h1 {
+  color: #f4f4ff;
+}
+
+.feature-card h2 {
+  color: #f4f4ff;
+}
+
+.feature-card input[type="file"] {
+  display: block;
+  max-width: 100%;
+  margin-top: 18px;
+  color: #f4f4ff;
+}
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid #8b5cf64d;
+  border-radius: 30px;
+  color: #c4b5fd;
+  background: #8b5cf615;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #a78bfa;
+  box-shadow: 0 0 12px #a78bfa;
+}
+
+h1 {
+  margin: 27px 0 18px;
+  font-size: clamp(38px, 7vw, 68px);
+  line-height: 1.1;
+  letter-spacing: -3px;
+  font-weight: 800;
+}
+
+.gradient-text {
+  display: block;
+  background: linear-gradient(90deg, #a78bfa, #7dd3fc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero-description {
+  max-width: 590px;
+  margin: 0 auto;
+  color: #a5acc5;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.primary-button {
+  margin-top: 30px;
+  padding: 15px 24px;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  background: linear-gradient(110deg, #8057e8, #6259ed);
+  box-shadow: 0 8px 30px #7657ff30;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px #7657ff50;
+}
+
+.features {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 15px 0 65px;
+}
+
+.feature-card {
+  padding: 25px;
+  text-align: left;
+  border: 1px solid #ffffff12;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #171d33, #111729);
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: #8b5cf655;
+}
+
+.feature-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: #8b5cf61c;
+  color: #b9a2ff;
+  font-size: 22px;
+}
+
+.feature-card h2 {
+  margin: 20px 0 10px;
+  font-size: 16px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #9ca6c0;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 24px 0 8px;
+  color: #747e99;
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .app {
+    padding: 18px;
+  }
+
+  .hero-section {
+    padding: 75px 0 40px;
+  }
+
+  h1 {
+    letter-spacing: -1.8px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .feature-card {
+    padding: 22px;
+  }
+
+  .nav-label {
+    font-size: 11px;
+  }
+}
